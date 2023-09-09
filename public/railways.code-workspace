@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../sql_user_page"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "railways"
+	}
+}
