@@ -18,7 +18,7 @@ db.connect((err => {
         throw err};
 }))
 
-app.use("/", require("./routes/pages"));
+app.use("/", require("./routes/pages.js"));
 //app.use("/", require("./controllers/auth"));
 app.listen(PORT);
 
