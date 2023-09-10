@@ -11,8 +11,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "hmr": "nodemon index.js",
+    "hmr": "nodemon sample_data.js",
     "nodemon": "npm run hmr",
-    "start": "node index.js"
+    "start": "node sample_data.js"
   }
 }

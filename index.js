@@ -12,14 +12,14 @@ app.use(express.static('public'))
 app.use(cookie());
 app.use(express.json());
 
-db.connect((err => {
+db.connect((error => {
     
-    if (err) {console.log("erorr!!!");
-        throw err};
+    if (error) {console.log("erorr!!!");
+        };
 }))
 
 app.use("/", require("./routes/pages.js"));
-//app.use("/", require("./controllers/auth"));
-app.listen(PORT);
+app.use("/", require("./controllers/auth"));
+// app.listen(PORT);
 
 

@@ -7,7 +7,7 @@ const login = async (req, res) => {//async return a promise resolve either by a 
     if (!phone || !password) return res.json({ status: "error", error: "please enter your phone number and password" })
     else {
         db.query('SELECT * FROM users WHERE phone=?', [phone], async (Err, result) => {
-            if (Err) throw Err;
+            if (error) throw error;
             if (!result.length || !await bcrypt.compare(password, result[0].password))
                 return res.json({ status: "error", error: "Incorrect phone number or password" })
             else {
