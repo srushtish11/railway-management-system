@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");//convert string converting json docue
 router.use(bodyParser.json());//middleware
 
 
-router.post("/register", register);
-router.post("/login", login);
+ router.post("/register", register);
+ router.post("/login", login);
 
 module.exports = router;//to use router in other aaplications
