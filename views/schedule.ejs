@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedule</title>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px 13px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #7AB730;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td:first-child,
+        th:first-child {
+            padding-left: 20px;
+        }
+
+        td:last-child,
+        th:last-child {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class=" position-relative p-0 px-lg-8" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">INDIAN</span>RAILWAYS</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="PNR.html" class="nav-item nav-link">PNR Enquiry</a>
+                        <a href="seat.html" class="nav-item nav-link">Seat availability</a>
+                        <a href="/schedule" class="nav-item nav-link">Train schedule</a>
+                        
+                        <a href="fare.html" class="nav-item nav-link">Fare enquiry</a>
+                        <a href="register.html" class="nav-item nav-link">Sign up</a>
+                        <a href="login.html" class="nav-item nav-link">login</a>
+                    </div>
+                </div>
+            </nav>
+            <a href="" class="navbar-brand">
+                <h2 class="m-0 text-primary" style="padding-left: 600px;padding: top 100px;"><span class="text-dark">TRAIN</span>SCHEDULE</h2>
+            </a>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Train Name</th>
+                <th>Train Number</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% schedule.forEach((train) => { %>
+                <tr>
+                    <td><%= train.train_name %></td>
+                    <td><%= train.number %></td>
+                    <td><%= train.source %></td>
+                    <td><%= train.destination %></td>
+                    <td><%= train.dept %></td>
+                    <td><%= train.arrival %></td>
+                    <td><%= train.mon  %></td>
+                    <td><%= train.tue %></td>
+                    <td><%= train.wed %></td>
+                    <td><%= train.thu %></td>
+                    <td><%= train.fri %></td>
+                    <td><%= train.sat %></td>
+                    <td><%= train.sun %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
+
