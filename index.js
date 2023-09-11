@@ -21,6 +21,10 @@ db.connect((error => {
         };
 }))
 
+
+
+
+
 app.use("/", require("./routes/pages.js"));
 app.use("/", require("./controllers/auth"));
 
@@ -36,7 +40,8 @@ app.get('/schedule', (req, res) => {
 
     // Pass the schedule data to the template
     res.render('schedule.ejs', { schedule: results });
-});});
+    });
+});
 app.listen(PORT);
 
 

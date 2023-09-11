@@ -8,7 +8,8 @@ function validateEmail(emailId) {
           const register = {
               email: emailid.value,
             password: password.value
-        }
+            }
+            
         fetch("http://localhost:3000/register", {
             method: "POST",
             body: JSON.stringify(register),
