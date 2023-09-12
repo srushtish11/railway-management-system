@@ -20,9 +20,9 @@ router.get("/login", (req, res) => {
 //     // Your code to handle the POST request and insert data into the database
 // });
 
-// router.get("/booknow", (req, res) => {
-//     res.sendFile("booknow.html", { root: "./public" });
-// });
+router.get("/booknow", (req, res) => {
+    res.sendFile("booknow.html", { root: "./public" });
+});
 
 
 
