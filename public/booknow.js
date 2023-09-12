@@ -9,7 +9,7 @@ function getRandom(PNR_no, event) {
     //var pnr = document.getElementById(PNR_no);
     // const length = 10;
     // var pnr = Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1));
-    let pnr = Math.floor(Math.random()*1000000000);
+    let pnr = Math.floor(Math.random() * 9000000000) + 1000000000;
     const booknow = {
         PNR_no: pnr,
         ph_no: ph_no.value,
