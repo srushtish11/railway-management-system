@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const feedController = require("../controllers/booknow");
+//const feedController = require("../controllers/booknow");
 //const loggedIn = require("../controllers/loggedin")
 
 router.get("/", (req, res) => {
@@ -20,15 +20,15 @@ router.get("/login", (req, res) => {
 //     // Your code to handle the POST request and insert data into the database
 // });
 
-router.get("/booknow", (req, res) => {
-    res.sendFile("booknow.html", { root: "./public" });
-});
+// router.get("/booknow", (req, res) => {
+//     res.sendFile("booknow.html", { root: "./public" });
+// });
 
 
 
 
-router.get("/post", feedController.booknow);
- router.post("/post", feedController.booknow);
+// router.get("/post", feedController.booknow);
+//  router.post("/post", feedController.booknow);
 
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+</head>
+<body>
+    <h1>Booking Page</h1>
+    <form action="/book" method="POST">
+        <label for="ph_no">Phone Number:</label>
+        <input type="text" name="ph_no" required><br><br>
+
+        <label for="date_of_dep">Date of Departure:</label>
+        <input type="date" name="date_of_dep" required><br><br>
+
+        <label for="seat_no">Seat Number:</label>
+        <input type="number" name="seat_no" required><br><br>
+
+        <label for="source">Source:</label>
+        <input type="text" name="source" required><br><br>
+
+        <label for="destination">Destination:</label>
+        <input type="text" name="destination" required><br><br>
+
+        <label for="compartment">Compartment:</label>
+        <input type="text" name="compartment" required><br><br>
+
+        <input type="submit" value="Book">
+    </form>
+</body>
+</html>

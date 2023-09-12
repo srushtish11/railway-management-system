@@ -42,6 +42,38 @@ app.get('/schedule', (req, res) => {
     res.render('schedule.ejs', { schedule: results });
     });
 });
+
+
+// Define a route for the booking page
+// app.get('/booking', (req, res) => {
+//   res.sendFile(__dirname + '/public/booking.html');
+// });
+
+// Handle form submissions
+// app.post('/book', (req, res) => {
+//   const { ph_no, date_of_dep, seat_no, source, destination, compartment } = req.body;
+
+//   // Generate a dummy PNR number (random 6-digit number)
+//   const PNR_no = Math.floor(100000 + Math.random() * 900000).toString();
+
+//   // Insert booking details into the MySQL database
+//   db.query(
+//     'INSERT INTO pnr_status (ph_no, date_of_dep, seat_no, source, destination, compartment, PNR_no) VALUES (?, ?, ?, ?, ?, ?, ?)',
+//     [ph_no, date_of_dep, seat_no, source, destination, compartment, PNR_no],
+//     (err, results) => {
+//       if (err) {
+//         console.error('Error inserting booking:', err);
+//         res.status(500).send('Error inserting booking');
+//       } else {
+//         console.log('Booking successfully inserted with PNR:', PNR_no);
+//         res.status(200).json({ PNR_no });
+//       }
+//     }
+//   );
+// });
+
+
+
 app.listen(PORT);
 
 
