@@ -95,6 +95,36 @@ app.post('/check_pnr', (req, res) => {
 });
 
 
+app.get('/check_seat', (req, res) => {
+    console.log("in first get");
+    // Render a form for users to enter a PNR number
+    res.render('check_seats.ejs');    
+});
+app.post('/check_seats', (req, res) => {
+    console.log('POST request to /check_seats received');
+    const { train_no } = req.body;
+    console.log(train_no);
+
+    // Fetch the booking details from the database by PNR
+    db.query('SELECT * FROM seats_available WHERE train_no = ?', [train_no], (err, results) => {
+        if (err) {
+            console.error('Error fetching booking:', err);
+            res.status(500).send('Error fetching booking');
+        } else {
+            if (results.length > 0) {
+                console.log("fetched train_no");
+                console.log(train_no);
+                // Render a page displaying the booking details
+                res.render('display_seats.ejs', { seats: results[0] });
+            } else {
+                // PNR not found, display an error message or redirect as needed
+                res.status(404).send('Train number not found');
+            }
+        }
+    });
+});
+
+
 app.listen(PORT);
 
 
