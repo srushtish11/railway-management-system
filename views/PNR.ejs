@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Page</title>
+</head>
+<body>
+    <h1>Status Page</h1>
+
+    <!-- Form for entering PNR number -->
+    <form action="/check-pnr" method="POST">
+        <label for="pnr">Enter PNR Number:</label>
+        <input type="text" name="pnr" required>
+        <input type="submit" value="Check PNR">
+    </form>
+
+    <!-- Display existing bookings fetched from the database -->
+    <h2>Existing Bookings</h2>
+    <ul>
+        <% bookings.forEach(function(booking) { %>
+            <li>
+                <strong>PNR Number:</strong> <%= booking.PNR_no %><br>
+                <strong>Phone Number:</strong> <%= booking.ph_no %><br>
+                <strong>Date of departure:</strong> <%= booking.date_of_dep %><br>
+                <strong>Seat Number:</strong> <%= booking.seat_no %><br>
+                <strong>Source:</strong> <%= booking.source %><br>
+                <strong>Destination:</strong> <%= booking.destination %><br>
+                <strong>Compartment:</strong> <%= booking.compartment %><br>
+                <!-- Display other attributes here -->
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

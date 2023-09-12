@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+</head>
+<body>
+    <h1>Booking Details</h1>
+
+    <!-- Display the booking details -->
+    <table>
+        <tr>
+            <td><strong>PNR Number:</strong></td>
+            <td><%= booking.PNR_no %></td>
+        </tr>
+        <tr>
+            <td><strong>Phone Number:</strong></td>
+            <td><%= booking.ph_no %></td>
+        </tr>
+        <tr>
+            <td><strong>Date of Departure:</strong></td>
+            <td><%= booking.date_of_dep %></td>
+        </tr>
+        <tr>
+            <td><strong>Seat Number:</strong></td>
+            <td><%= booking.seat_no %></td>
+        </tr>
+        <tr>
+            <td><strong>Source:</strong></td>
+            <td><%= booking.source %></td>
+        </tr>
+        <tr>
+            <td><strong>Destination:</strong></td>
+            <td><%= booking.destination %></td>
+        </tr>
+        <tr>
+            <td><strong>Destination:</strong></td>
+            <td><%= booking.destination %></td>
+        </tr>
+        <tr>
+            <td><strong>Compartment:</strong></td>
+            <td><%= booking.compartment %></td>
+        </tr>
+        <tr>
+            <td><strong>Status:</strong></td>
+            <td><%= booking.status %></td>
+        </tr>
+        <!-- Repeat this pattern for other attributes -->
+    </table>
+</body>
+</html>
