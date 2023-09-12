@@ -19,6 +19,7 @@ document.querySelector(".formc").addEventListener("submit", (e) => {
             else {
                 alert("Successfully logged in")
                 window.localStorage.setItem("stat","1");
+                window.location.href="index.html";
                 
 
             }

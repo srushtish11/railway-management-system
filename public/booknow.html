@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BOOK NOW</title>
+  <link href="css/style.css" rel="stylesheet">
   <style>
     .register-photo {
       background: #f1f7fc;
@@ -91,31 +92,72 @@
       opacity: 0.9;
       text-decoration: none;
     }
+    select:focus option[selected] {
+      display: none;
+    }
+    select{
+      width: 300px;
+      height: 30px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Navbar Start -->
+  <div class="container-fluid position-relative nav-bar p-0">
+    <div class=" position-relative p-0 px-lg-8" style="z-index: 9;">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 text-primary"><span class="text-dark">INDIAN</span>RAILWAYS</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="PNR.html" class="nav-item nav-link">PNR Enquiry</a>
+                    <a href="seat.html" class="nav-item nav-link">Seat availability</a>
+                    <a href="schedule.html" class="nav-item nav-link">Train schedule</a>
+
+                    <a href="fare.html" class="nav-item nav-link">Fare enquiry</a>
+                    <a href="register.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
   <div class="register-photo">
     <div class="form-container">
       <div class="image-holder"></div>
       <form  name="form"  id="form" class="formc" onsubmit="return (getRandom(document.form.PNR_no,event))">
         <!-- <h2 class="text-center"><strong>Create</strong> an account.</h2> -->
-        <div class="form-group"><input class="form-control" type="number" name="PNR_no" id="PNR_no"></div>
+        <!-- <div class="form-group"><input class="form-control" type="number" name="PNR_no" id="PNR_no"></div> -->
         <div class="form-group"><input class="form-control" type="phone" name="ph_no" id="ph_no"
-            placeholder="Phone number"></div>
-        <div class="form-group"><input class="form-control" type="date" name="date_of_dep" id="date_of_dep"></div>
+            placeholder="Phone number" required></div>
+        <div class="form-group"><input class="form-control" type="date" name="date_of_dep" id="date_of_dep" required></div>
         <div class="form-group"><input class="form-control" type="number" name="seat_no" id="seat_no"
-            placeholder="Seat number"></div>
-        <div class="form-group"><input class="form-control" type="text" name="source" id="source" placeholder="Source">
+            placeholder="Seat number" required></div>
+        <div class="form-group"><input class="form-control" type="text" name="source" id="source" placeholder="Source" required>
         </div>
         <div class="form-group"><input class="form-control" type="text" name="destination" id="destination"
-            placeholder="Destination"></div>
-        <div class="form-group"><input class="form-control" type="text" name="compartment" id="compartment"
-            placeholder="Compartment"></div>
+            placeholder="Destination" required></div>
+        <div class="form-group">
+          <select name="compartment" id="compartment" class="form-select">
+            <option value=""  selected>Compartment</option>
+            <option value="slp">slp</option>
+            <option value="1a">1a</option>
+            <option value="2a">2a</option>
+            <option value="3a">3a</option>
+          </select>
+        </div>
         
         <div class="form-group">
           <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox"
-                display>I agree to the license terms.</label></div>
+                display required>I agree to the license terms.</label></div>
         </div>
 
         <div class="form-group">
