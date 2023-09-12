@@ -1,19 +1,24 @@
 //const { response } = require("express");
 
 function getRandom(PNR_no, event) {
-    alert("in public.js");
+    const status=["confirmed","WL","RAC"];
+    var stat=status[Math.floor(Math.random()*status.length)]
+    
+    console.log(stat);
     //event.preventDefault();
-    // var pnr = document.getElementById(PNR_no);
+    //var pnr = document.getElementById(PNR_no);
     // const length = 10;
     // var pnr = Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1));
+    let pnr = Math.random() * (9999999999 - 1000000000) + 1000000000;
     const booknow = {
-        PNR_no: PNR_no.value,
+        PNR_no: pnr,
         ph_no: ph_no.value,
         date_of_dep: date_of_dep.value,
         seat_no: seat_no.value,
         source: source.value,
         destination: destination.value,
-        compartment: compartment.value
+        compartment: compartment.value,
+        status:stat
     }
     
     fetch("http://localhost:3000/booknow", {
@@ -26,17 +31,14 @@ function getRandom(PNR_no, event) {
         },
     }).then(res => res.json())
         .then(data => {
-            alert("Booked");
+            
             if (data.status == "error") {
                 alert("Failed to Book")
-            } else {
-                alert("Successfully Booked")
-
-            }
+            } 
         })
     
     
-    alert("end of public.js");
+    alert("Sucessfully booked");
 }
 
 //     try{
