@@ -31,9 +31,6 @@ function validateEmail(emailId) {
         else {
           alert("Invalid email address.");
           document.form.email.focus();
-          
-          
-          // location.reload();
           document.getElementById("email").select();
         
           return false;

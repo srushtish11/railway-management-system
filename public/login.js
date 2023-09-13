@@ -1,5 +1,3 @@
-// const loggedIn = require("../controllers/loggedin")
-
 document.querySelector(".formc").addEventListener("submit", (e) => {
     const login = {
         email: email.value,
@@ -20,8 +18,6 @@ document.querySelector(".formc").addEventListener("submit", (e) => {
                 alert("Successfully logged in")
                 window.localStorage.setItem("stat","1");
                 window.location.href="index.html";
-                
-
             }
 
 

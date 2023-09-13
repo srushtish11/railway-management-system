@@ -1,5 +1,4 @@
 const db = require("../routes/db-config");
-// const bcrypt = require("bcryptjs");
 const booknow = async (req, res) => {
     console.log("controller",req.body);
     console.log("in controllers.js");
